@@ -1,0 +1,67 @@
+
+ # 규칙을 모아둔 docs
+ # https://realm.github.io/SwiftLint/rule-directory.html
+ 
+ # Smartjack SwiftLint Wiki
+ # https://github.com/smartjack-wp/SwiftLint/wiki
+
+ # 적용해야 하는 규칙들
+ # default로 적용되어있는 규칙들은 명시하지 않는다
+opt_in_rules:
+- attributes
+- force_unwrapping
+- unused_declaration
+- unused_import
+
+ # 적용하지 않는 규칙들
+ # rule identifiers turned on by default to exclude from running
+disabled_rules:
+- force_cast
+- no_fallthrough_only
+ 
+ # lint적용을 제외할 path들
+ # paths to ignore during linting. Takes precedence over `included`.
+excluded:
+- Pods
+ 
+ # 사용자가 설정한 규칙들
+ # Customized Rules
+line_length:
+    ignores_function_declarations: true
+    ignores_comments: true
+    ignores_urls: true
+    warning: 130
+    error: 200
+ 
+function_body_length:
+    warning: 50
+    error: 100
+ 
+function_parameter_count:
+    warning: 5
+    error: 8
+ 
+file_length:
+    ignore_comment_only_lines: true
+    warning: 1000
+    error: 1500
+
+type_body_length:
+    warning: 500
+    error: 650
+ 
+identifier_name:
+    allowed_symbols: "_"
+    min_length: 2
+
+cyclomatic_complexity:
+    warning: 15
+    error: 25
+    
+trailing_whitespace:
+    ignores_empty_lines: true
+    ignores_comments: true
+
+ # warning, error등을 보고 받을 platform
+ # reporter type (xcode, json, csv, checkstyle, junit, html, emoji)
+reporter: "xcode"
