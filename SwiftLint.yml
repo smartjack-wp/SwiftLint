@@ -5,8 +5,10 @@
  # Smartjack SwiftLint Wiki
  # https://github.com/smartjack-wp/SwiftLint/wiki
  
- # 코드 내부에서 예외적으로 규칙을 enable/disable 시켜야 하는 경우에는 다음 주석을 이용한다
+ # 코드 내부에서 예외적으로 규칙을 enable/disable 시켜야 하는 경우에는 다음 주석을 이용한다.
  # <// swiftlint[:enable||:disable] [:previous||:this||:next] [<rule>||[<rule1> <rule2> ...]]>
+ # 주석에 대한 자세하 내용은 하단 Wiki의 예시를 참고하자.
+ # https://github.com/smartjack-wp/SwiftLint/wiki#explicit-exeptions
 
  # 적용해야 하는 규칙들
  # default로 적용되어있는 규칙들은 명시하지 않는다
